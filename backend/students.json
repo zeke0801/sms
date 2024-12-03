@@ -1,0 +1,15 @@
+[
+  {
+    "studentId": "SMS001",
+    "firstName": "John",
+    "lastName": "Doe",
+    "bloodType": "A+",
+    "height": "175",
+    "weight": "70",
+    "allergies": [],
+    "medications": [],
+    "medicalConditions": [],
+    "vaccinations": [],
+    "lastVisits": []
+  }
+]

@@ -1,0 +1,643 @@
+:root {
+  font-size: 16px; /* Base font size for rem calculations */
+}
+
+.registrar-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.registrar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.student-details-container {
+  background-color: white;
+  margin: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.student-basic-info {
+  display: flex;
+  padding: 0.9375rem;
+  background-color: #f4f6f7;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.05);
+}
+
+.student-profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.25rem;
+  width: 13.75rem;
+}
+
+.student-profile-image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12.5rem;
+  position: relative;
+}
+
+.profile-image-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-preview img {
+  max-width: 12.5rem;
+  max-height: 12.5rem;
+  border-radius: 0.625rem;
+  object-fit: cover;
+  margin-bottom: 0.625rem;
+}
+
+.profile-image-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 0.625rem;
+}
+
+.profile-image-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.remove-image-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.profile-image-actions button:hover {
+  opacity: 0.9;
+}
+
+.profile-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 11.25rem;
+  height: 11.25rem;
+  border: 0.1875rem dashed #bdc3c7;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile-image-placeholder i {
+  font-size: 3rem;
+  color: #7f8c8d;
+  margin-bottom: 0.625rem;
+}
+
+.profile-image-placeholder span {
+  color: #7f8c8d;
+}
+
+.upload-profile-image-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3125rem;
+  margin-top: 0.625rem;
+  cursor: pointer;
+}
+
+.student-info-columns {
+  display: flex;
+  flex-grow: 1;
+  gap: 1.25rem;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #ecf0f1;
+  transition: background-color 0.2s ease;
+}
+
+.info-item:hover {
+  background-color: #f8f9fa;
+}
+
+.info-item strong {
+  color: #2c3e50;
+  margin-bottom: 0.1875rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+}
+
+.info-item span {
+  color: #34495e;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.birth-certificate-container {
+  background-color: #f4f6f7;
+  padding: 0.9375rem;
+  border-top: 0.0625rem solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.birth-certificate-container h3 {
+  color: #2c3e50;
+  margin-bottom: 0.625rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+.birth-certificate-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 25rem;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 0.125rem dashed #bdc3c7;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  text-align: center;
+  background-color: white;
+}
+
+.birth-certificate-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.birth-certificate-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12.5rem;
+  padding: .5rem;
+  height: 6rem;
+  border: 0.125rem dashed #2c3e50;
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.birth-certificate-placeholder:hover {
+  background-color: rgba(44, 62, 80, 0.05);
+}
+
+.pdf-icon {
+  color: #e74c3c;  /* Vibrant red color */
+  font-size: 3rem;
+  margin-bottom: 0.625rem;
+}
+
+.birth-certificate-placeholder i {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 0.625rem;
+}
+
+.birth-certificate-placeholder span {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.birth-certificate-preview iframe {
+  max-width: 100%;
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.birth-certificate-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 0.625rem;
+}
+
+.birth-certificate-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.upload-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.3125rem;
+}
+
+.upload-button,
+.remove-button {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+}
+
+.upload-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.upload-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-0.0625rem);
+}
+
+.remove-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-0.0625rem);
+}
+
+.upload-birth-certificate-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3125rem;
+  margin-top: 0.625rem;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.department-section {
+  padding: 1.25rem;
+}
+
+.department-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.department-selector select {
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #bdc3c7;
+  background-color: white;
+  font-size: 1rem;
+  min-width: 12.5rem;
+}
+
+.registrar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.department-view {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.department-view h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.125rem solid #3498db;
+  padding-bottom: 0.625rem;
+}
+
+.clinic-info-grid, 
+.placeholder-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9375rem;
+}
+
+.info-group {
+  background-color: #f9f9f9;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-group.full-width {
+  grid-column: span 2;
+}
+
+.info-group strong {
+  color: #2c3e50;
+  margin-bottom: 0.3125rem;
+}
+
+.placeholder-view p {
+  grid-column: span 2;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+/* Modal Styles */
+.registrar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.registrar-modal-content {
+  background-color: white;
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+  width: 25rem;
+  max-width: 90%;
+  box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+}
+
+.registrar-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 0.9375rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+  color: #34495e;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #bdc3c7;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+
+.input-hint {
+  display: block;
+  margin-top: 0.3125rem;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.search-another-button {
+  background-color: #27ae60;  /* Green color for positive action */
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.search-another-button:hover {
+  background-color: #2ecc71;  /* Slightly lighter green on hover */
+  transform: translateY(-0.0625rem);
+  box-shadow: 0 0.1875rem 0.375rem rgba(0,0,0,0.15);
+}
+
+.search-another-button:active {
+  transform: translateY(0.0625rem);
+  box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,0.1);
+}
+
+.student-not-found-modal {
+  text-align: center;
+  padding: 1.875rem;
+}
+
+.student-not-found-modal .modal-icon {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 1.25rem;
+}
+
+.student-not-found-modal h2 {
+  color: #e74c3c;
+  margin-bottom: 0.9375rem;
+}
+
+.student-not-found-modal p {
+  color: #34495e;
+  margin-bottom: 0.625rem;
+}
+
+.student-not-found-modal .close-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.9375rem;
+}
+
+.student-not-found-modal .close-button:hover {
+  background-color: #c0392b;
+}
+
+.additional-documents-section {
+  padding: 1.25rem;
+  background-color: #f9f9f9;
+  border-top: 0.0625rem solid #e0e0e0;
+}
+
+.file-type-note {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.7rem;
+}
+
+.file-type-note small {
+  display: block;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+.uploaded-file-info {
+  margin-top: 0.3125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.uploaded-file-info small {
+  color: #7f8c8d;
+  font-size: 0.6rem;
+  margin: 0.125rem 0;
+  max-width: 12.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fullscreen-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.fullscreen-preview-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-preview-close {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.fullscreen-preview-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fullscreen-preview-pdf {
+  width: 90vw;
+  height: 90vh;
+  border: none;
+}
+
+.emergency-contact {
+  background-color: #ffdddd !important; /* Light red background */
+  border: 0.0625rem solid #ff0000 !important; /* Red border */
+}
