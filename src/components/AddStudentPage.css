@@ -1,0 +1,236 @@
+.add-student-page {
+  padding: 2rem;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.add-student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.add-student-header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.back-button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2c3e50;
+}
+
+.add-student-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.125rem solid #3498db;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1rem;
+}
+
+.form-subsection {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 0.0625rem solid #eee;
+}
+
+.form-subsection h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(52, 152, 219, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  min-height: 6.25rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(52, 152, 219, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 0.0625rem solid #eee;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #219a52;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c0392b;
+}
+
+/* Style for required fields with asterisk */
+.form-group label::after {
+  content: "";
+}
+
+.form-group label[for*="studentId"]::after,
+.form-group label[for*="firstName"]::after,
+.form-group label[for*="lastName"]::after,
+.form-group label[for*="age"]::after,
+.form-group label[for*="gender"]::after,
+.form-group label[for*="nationality"]::after,
+.form-group label[for*="grade"]::after,
+.form-group label[for*="mothersName"]::after,
+.form-group label[for*="fathersName"]::after,
+.form-group label[for*="emergencyContact"]::after,
+.form-group label[for*="clinicalInfo.height"]::after,
+.form-group label[for*="clinicalInfo.weight"]::after,
+.form-group label[for*="clinicalInfo.vaccinations"]::after {
+  content: "*";
+  color: #e74c3c;
+  margin-left: 0.25rem;
+}
+
+/* Guardian fields only show required asterisk when guardian checkbox is checked */
+.form-group label[for*="guardianName"]::after {
+  content: var(--guardian-required, "");
+  color: #e74c3c;
+  margin-left: 0.25rem;
+}
+
+.checkbox-group label::after {
+  content: "" !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 48rem) {
+  .add-student-page {
+    padding: 1rem;
+  }
+  
+  .add-student-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+  }
+}

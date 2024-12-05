@@ -1,0 +1,516 @@
+.clinic-page {
+  padding: 1.25rem;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Modal Styles */
+.clinic-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.clinic-modal-content {
+  background: white;
+  padding: 1.875rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 31.25rem;
+}
+
+.clinic-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+  color: #666;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.form-group .input-hint {
+  display: block;
+  margin-top: 0.3125rem;
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+/* Medical Info Container */
+.medical-info-container {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  margin: 1.25rem auto;
+  max-width: 75rem;
+}
+
+.header-section {
+  padding: 1.25rem;
+  border-bottom: 0.0625rem solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-section h2 {
+  margin: 0;
+  color: #2196F3;
+  font-size: 1.5rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.header-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-buttons button i {
+  font-size: 1rem;
+}
+
+.new-search-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.back-btn {
+  background-color: #757575;
+  color: white;
+}
+
+/* Patient Banner */
+.patient-banner {
+  background: linear-gradient(to right, #2196F3, #1976D2);
+  color: white;
+  padding: 1.25rem;
+}
+
+.patient-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.patient-details {
+  margin-top: 0.625rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.patient-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.patient-details i {
+  font-size: 1rem;
+}
+
+/* Vital Signs Grid */
+.vital-signs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: #f8f9fa;
+}
+
+.vital-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.vital-icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background: #e3f2fd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vital-icon i {
+  font-size: 1.5rem;
+  color: #2196F3;
+}
+
+.vital-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.vital-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.vital-label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Medical Sections */
+.medical-sections {
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1.25rem;
+}
+
+.medical-section {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.9375rem;
+}
+
+.section-header i {
+  font-size: 1.25rem;
+  color: #2196F3;
+}
+
+.section-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.125rem;
+}
+
+.section-content {
+  color: #666;
+}
+
+.condition-list,
+.medication-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.condition-list li,
+.medication-list li {
+  padding: 0.5rem 0;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.condition-list li:last-child,
+.medication-list li:last-child {
+  border-bottom: none;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Emergency Section */
+.emergency-section {
+  padding: 1.25rem;
+  background: white;
+  margin: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.9375rem;
+}
+
+.emergency-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+
+.emergency-item label {
+  font-size: 0.875rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.emergency-item span {
+  color: #333;
+  font-size: 1rem;
+}
+
+.clinic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.clinic-content {
+  flex-grow: 1;
+  background-color: #f0f0f0;
+  padding: 1.25rem;
+}
+
+.medical-form {
+  background-color: white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+  padding: 1.875rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.form-section {
+  margin-bottom: 1.875rem;
+  border-bottom: 0.0625rem solid #ecf0f1;
+  padding-bottom: 1.25rem;
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.125rem solid #3498db;
+  padding-bottom: 0.625rem;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 0.9375rem;
+}
+
+.form-group:last-child {
+  margin-right: 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+  color: #34495e;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #bdc3c7;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group textarea {
+  min-height: 6.25rem;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.save-button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #27ae60;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+.info-item {
+  background: #f8f9fa;
+  padding: 0.9375rem;
+  border-radius: 0.25rem;
+  border-left: 0.25rem solid #2196F3;
+}
+
+.info-item label {
+  display: block;
+  color: #666;
+  margin-bottom: 0.3125rem;
+  font-weight: bold;
+}
+
+.info-item span {
+  color: #333;
+  font-size: 1rem;
+}
+
+.medical-records,
+.emergency-contacts,
+.student-basic-info {
+  margin-bottom: 1.875rem;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.dynamic-list-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.dynamic-list-input label {
+  margin-bottom: 0.3125rem;
+  color: #2c3e50;
+  font-size: 0.5625rem;
+}
+
+.dynamic-list-input .input-container {
+  display: flex;
+  gap: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
+.dynamic-list-input .input-container input {
+  flex-grow: 1;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #bdc3c7;
+  border-radius: 0.1875rem;
+}
+
+.dynamic-list-input .add-item-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dynamic-list-input .add-item-button:hover {
+  background-color: #2980b9;
+}
+
+.dynamic-list-input .item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
+}
+
+.dynamic-list-input .item-tag {
+  display: flex;
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 0.15625rem 0.3125rem;
+  border-radius: 0.1875rem;
+  font-size: 0.5625rem;
+}
+
+.dynamic-list-input .remove-item-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  margin-left: 0.3125rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.625rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.dynamic-list-input .remove-item-button:hover {
+  color: #c0392b;
+}
