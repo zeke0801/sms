@@ -87,13 +87,12 @@ const StudentNotFoundModal = ({ isOpen, onClose, studentId }) => {
   );
 };
 
-const InitialChoiceModal = ({ isOpen, onSearchStudent, onAddStudent, onViewMasterList }) => {
+const InitialChoiceModal = ({ isOpen, onSearchStudent, onAddStudent, onViewMasterList, onReturnToDashboard }) => {
   if (!isOpen) return null;
 
   return (
     <div className="registrar-modal-overlay">
       <div className="registrar-modal-content initial-choice-modal">
-        <h2>Registrar Actions</h2>
         <div className="modal-buttons-container">
           <button onClick={onSearchStudent} className="choice-button search-button">
             <i className="fas fa-search"></i>
@@ -109,6 +108,11 @@ const InitialChoiceModal = ({ isOpen, onSearchStudent, onAddStudent, onViewMaste
             <i className="fas fa-list"></i>
             Student Master List
             <span className="button-description">View complete list of students</span>
+          </button>
+          <button onClick={onReturnToDashboard} className="choice-button dashboard-button">
+            <i className="fas fa-home"></i>
+            Return to Dashboard
+            <span className="button-description">Go back to main dashboard</span>
           </button>
         </div>
       </div>
@@ -595,6 +599,10 @@ const RegistrarPage = () => {
     navigate('/registrar/master-list');
   };
 
+  const handleReturnToDashboard = () => {
+    navigate('/');
+  };
+
   const handleStudentIdSubmit = async (studentId) => {
     setLoading(true);
     setError(null);
@@ -904,6 +912,7 @@ const RegistrarPage = () => {
         onSearchStudent={handleSearchStudent}
         onAddStudent={handleAddStudent}
         onViewMasterList={handleViewMasterList}
+        onReturnToDashboard={handleReturnToDashboard}
       />
 
       <StudentIDModal

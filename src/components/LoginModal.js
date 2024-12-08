@@ -13,15 +13,24 @@ const LoginModal = ({ isOpen, onClose, department }) => {
     console.log(`Attempting to login to ${department}`);
     
     // Navigate based on department
-    switch(department) {
-      case 'Clinic':
-        navigate('/clinic');
-        break;
-      case 'Registrar':
+    switch(department.toLowerCase()) {
+      case 'registrar':
         navigate('/registrar');
         break;
+      case 'clinic':
+        navigate('/clinic');
+        break;
+      case 'student affairs':
+        navigate('/student-affairs');
+        break;
+      case 'guidance':
+        navigate('/guidance');
+        break;
+      case 'campus ministry':
+        navigate('/campus-ministry');
+        break;
       default:
-        alert('Login functionality for this department to be implemented');
+        navigate(`/${department.toLowerCase().replace(/\s+/g, '-')}`);
     }
     
     onClose();

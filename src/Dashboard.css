@@ -323,8 +323,8 @@
 }
 
 .logo-image {
-  max-width: 6.25rem;
-  max-height: 6.25rem;
+  max-width: 4.25rem;
+  max-height: 4.25rem;
   object-fit: contain;
   margin-right: 1.25rem;
 }

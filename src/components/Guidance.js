@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './ClinicPage.css';
+import './Guidance.css';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -54,8 +54,8 @@ const StudentIDModal = ({ isOpen, onClose, onSubmit }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="clinic-modal-overlay">
-      <div className="clinic-modal-content">
+    <div className="guidance-modal-overlay">
+      <div className="guidance-modal-content">
         <h2>Enter Student ID</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -85,8 +85,8 @@ const StudentNotFoundModal = ({ isOpen, onClose, studentId }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="clinic-modal-overlay">
-      <div className="clinic-modal-content student-not-found-modal">
+    <div className="guidance-modal-overlay">
+      <div className="guidance-modal-content student-not-found-modal">
         <div className="modal-icon">
           <i className="fas fa-exclamation-triangle"></i>
         </div>
@@ -105,8 +105,8 @@ const InitialChoiceModal = ({ isOpen, onSearchStudent, onReturnToDashboard }) =>
   if (!isOpen) return null;
 
   return (
-    <div className="clinic-modal-overlay">
-      <div className="clinic-modal-content initial-choice-modal">
+    <div className="guidance-modal-overlay">
+      <div className="guidance-modal-content initial-choice-modal">
         <div className="modal-buttons-container">
           <button onClick={onSearchStudent} className="choice-button search-button">
             <i className="fas fa-search"></i>
@@ -138,7 +138,7 @@ const EditableField = ({ field, title, icon, items = [], onAdd, onRemove }) => {
   };
 
   return (
-    <div className="medical-section">
+    <div className="guidance-section">
       <div className="section-header">
         <i className={`fas ${icon}`}></i>
         <h4>{title}</h4>
@@ -214,7 +214,7 @@ const NotesSection = ({ notes, onSave }) => {
   };
 
   return (
-    <div className="medical-section notes-section">
+    <div className="guidance-section notes-section">
       <div className="section-header">
         <i className="fas fa-clipboard-list"></i>
         <h4>Doctor's Notes</h4>
@@ -357,7 +357,7 @@ const VisitHistorySection = ({ visits = [], onSave }) => {
   };
 
   return (
-    <div className="medical-section visit-history-section">
+    <div className="guidance-section visit-history-section">
       <div className="section-header">
         <i className="fas fa-history"></i>
         <h4>Visit History</h4>
@@ -531,7 +531,7 @@ const VaccinationSection = ({ vaccinations = [], onSave }) => {
   };
 
   return (
-    <div className="medical-section vaccination-section">
+    <div className="guidance-section vaccination-section">
       <div className="section-header">
         <i className="fas fa-syringe"></i>
         <h4>Vaccination History</h4>
@@ -667,7 +667,7 @@ const DentalHistorySection = ({ dentalHistory = [], onSave }) => {
   };
 
   return (
-    <div className="medical-section dental-history-section">
+    <div className="guidance-section dental-history-section">
       <div className="section-header">
         <i className="fas fa-tooth"></i>
         <h4>Dental History</h4>
@@ -786,7 +786,7 @@ const DentalHistorySection = ({ dentalHistory = [], onSave }) => {
   );
 };
 
-const ClinicPage = () => {
+const Guidance = () => {
   const navigate = useNavigate();
   const [showInitialModal, setShowInitialModal] = useState(true);
   const [showStudentIdModal, setShowStudentIdModal] = useState(false);
@@ -980,7 +980,7 @@ const ClinicPage = () => {
     };
 
     return (
-      <div className="medical-info-container">
+      <div className="guidance-info-container">
         <div className="header-section">
           <h2>Student Medical Information</h2>
           <div className="header-buttons">
@@ -993,7 +993,7 @@ const ClinicPage = () => {
           </div>
         </div>
 
-        <div className="medical-content">
+        <div className="guidance-content">
           <div className="patient-banner">
             <div className="profile-section">
               <div className="profile-picture">
@@ -1187,7 +1187,7 @@ const ClinicPage = () => {
             </div>
           </div>
 
-          <div className="medical-sections">
+          <div className="guidance-sections">
             <EditableField
               field="allergies"
               title="Allergies"
@@ -1260,7 +1260,7 @@ const ClinicPage = () => {
   };
 
   return (
-    <div className="clinic-page">
+    <div className="guidance-page">
       <InitialChoiceModal
         isOpen={showInitialModal}
         onSearchStudent={handleSearchStudent}
@@ -1281,4 +1281,4 @@ const ClinicPage = () => {
   );
 };
 
-export default ClinicPage;
+export default Guidance;

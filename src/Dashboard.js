@@ -15,36 +15,17 @@ const Dashboard = () => {
   };
 
   const handleDepartmentClick = (department) => {
-    if (department === 'Registrar') {
-      navigate('/registrar');
-    } else if (department === 'Clinic') {
-      navigate('/clinic');
-    } else if (department === 'Campus Ministry') {
-      navigate('/campus-ministry');
-    } else if (department === 'Prefect of Students') {
-      navigate('/prefect-of-students');
-    } else if (department === 'ANSGO') {
-      navigate('/ansgo');
-    } else if (department === 'Student Master List') {
-      navigate('/registrar/master-list');
-    } else {
-      setSelectedDepartment(department);
-      setIsModalOpen(true);
-    }
+    setSelectedDepartment(department);
+    setIsModalOpen(true);
   };
 
   const departments = [
+    'Registrar',
     'Clinic',
     'Student Affairs',
-    'OPS',
-    'Registrar',
+    'Guidance',
     'Campus Ministry',
-    'Triumph',
-    'Library',
-    'ANSGO',
-    'Prefect of Students',
-    'ANSGO',
-    'Student Master List'
+
   ];
 
   const dashboardButtons = [
@@ -59,34 +40,19 @@ const Dashboard = () => {
       onClick: () => handleDepartmentClick('Clinic')
     },
     {
-      label: 'Campus Ministry',
-      icon: 'fa-church',
-      onClick: () => handleDepartmentClick('Campus Ministry')
-    },
-    {
-      label: 'Prefect of Students',
-      icon: 'fa-user-shield',
-      onClick: () => handleDepartmentClick('Prefect of Students')
+      label: 'Student Affairs',
+      icon: 'fa-hands-helping',
+      onClick: () => handleDepartmentClick('Student Affairs')
     },
     {
       label: 'Guidance',
-      icon: 'fa-hands-helping',
+      icon: 'fa-user-shield',
       onClick: () => handleDepartmentClick('Guidance')
     },
     {
-      label: 'Finance',
-      icon: 'fa-money-bill-wave',
-      onClick: () => handleDepartmentClick('Finance')
-    },
-    {
-      label: 'ANSGO',
-      icon: 'fa-globe',
-      onClick: () => handleDepartmentClick('ANSGO')
-    },
-    {
-      label: 'Student Master List',
-      icon: 'fa-list-alt',
-      onClick: () => handleDepartmentClick('Student Master List')
+      label: 'Campus Ministry',
+      icon: 'fa-church',
+      onClick: () => handleDepartmentClick('Campus Ministry')
     }
   ];
 

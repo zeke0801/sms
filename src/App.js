@@ -4,8 +4,9 @@ import Dashboard from './Dashboard';
 import RegistrarPage from './components/RegistrarPage';
 import StudentMasterList from './components/StudentMasterList';
 import ClinicPage from './components/ClinicPage';
-import CampusMinistryPage from './components/CampusMinistryPage';
-import PrefectOfStudentsPage from './components/PrefectOfStudentsPage';
+import CampusMinistry from './components/CampusMinistry';
+import Guidance from './components/Guidance';
+import StudentAffairs from './components/StudentAffairs';
 import './App.css';
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
           <Route path="/registrar/add-student" element={<RegistrarPage initialMode="add" />} />
           <Route path="/registrar/master-list" element={<StudentMasterList />} />
           <Route path="/clinic" element={<ClinicPage />} />
-          <Route path="/campus-ministry" element={<CampusMinistryPage />} />
-          <Route path="/prefect-of-students" element={<PrefectOfStudentsPage />} />
+          <Route path="/campus-ministry" element={<CampusMinistry />} />
+          <Route path="/guidance" element={<Guidance />} />
+          <Route path="/student-affairs" element={<StudentAffairs />} />
           <Route path="/ansgo" element={<div>ANSGO Page (Under Construction)</div>} />
           <Route path="/student-master-list" element={<StudentMasterList />} />
           {/* Redirect old paths to new ones */}

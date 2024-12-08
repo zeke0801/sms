@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './ClinicPage.css';
+import './CampusMinistry.css';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -786,7 +786,7 @@ const DentalHistorySection = ({ dentalHistory = [], onSave }) => {
   );
 };
 
-const ClinicPage = () => {
+const CampusMinistry = () => {
   const navigate = useNavigate();
   const [showInitialModal, setShowInitialModal] = useState(true);
   const [showStudentIdModal, setShowStudentIdModal] = useState(false);
@@ -1281,4 +1281,4 @@ const ClinicPage = () => {
   );
 };
 
-export default ClinicPage;
+export default CampusMinistry;
