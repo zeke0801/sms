@@ -221,6 +221,10 @@
   width: 90%;
   max-width: 31.25rem;
   position: relative;
+  background: rgba(255, 255, 255, 0.886);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(11, 14, 45, 0.37);
 }
 
 .close-modal {

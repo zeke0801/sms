@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LoginModal from './components/LoginModal';
+import LoginModal from './LoginModal';
 import './Dashboard.css';
-import AteneoDeLogo from './icons/Ateneo_de_Naga_University_logo.png';
+import AteneoDeLogo from '../icons/Ateneo_de_Naga_University_logo.png';
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,7 +63,7 @@ const Dashboard = () => {
           <img src={AteneoDeLogo} alt="Ateneo de Naga Logo" className="logo-image" />
         </div>
         <button className="logout-button" onClick={handleLogout}>
-          Logout
+          Return
         </button>
       </header>
       <div className="main-content">
